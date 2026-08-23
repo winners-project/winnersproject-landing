@@ -1,1 +1,1 @@
-
+Client-side form validation and waitlist confirmation behavior; no data is stored in GitHub.

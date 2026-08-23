@@ -1,1 +1,1 @@
-# winnersproject-landing
+Repository documentation with local preview and GitHub Pages publishing instructions.
