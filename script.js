@@ -1,1 +1,1 @@
-Client-side form validation and waitlist confirmation behavior; no data is stored in GitHub.
+const form=document.querySelector('#waitlist-form');const error=document.querySelector('#form-error');const year=document.querySelector('#year');if(year)year.textContent=new Date().getFullYear();if(form){form.addEventListener('submit',event=>{event.preventDefault();error.textContent='';if(!form.checkValidity()){error.textContent='Preencha todos os campos obrigatórios com informações válidas.';form.reportValidity();return;}window.location.href='obrigado.html';});}
