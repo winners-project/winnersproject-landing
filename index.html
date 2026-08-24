@@ -92,29 +92,31 @@
     </section>
 
     <section class="form-section" id="inscricao">
-      <div class="form-intro"><p class="section-label">Lista de espera</p><h2>Ajude a desenhar a turma fundadora.</h2><p>Cadastre-se para receber a abertura das vagas e responder a uma pesquisa curta sobre o seu cenário de entrega.</p></div>
-      <p class="form-note">
-        Para entrar na lista de espera, preencha o formulário seguro abaixo.
-      </p>
-      
-      <a
-        class="button"
-        href="https://docs.google.com/forms/d/e/1FAIpQLSclfHLg66dIWeq-mVd-gNxnpv84HXOUw_7OFOs6uFMgn4XzGw/viewform?usp=publish-editor"
-        target="_blank"
-        rel="noopener"
-      >
-        Abrir formulário de inscrição
-        <span aria-hidden="true">→</span>
-      </a>
-      <form id="waitlist-form" novalidate>
-        <label>Nome<input name="nome" type="text" autocomplete="name" required></label>
-        <label>E-mail<input name="email" type="email" autocomplete="email" required></label>
-        <label>Hoje, como você entrega software ao hardware?<select name="deploy" required><option value="">Selecione uma opção</option><option>SCP, SSH ou cópia manual</option><option>Script próprio</option><option>Imagem SD ou flash manual</option><option>CI/CD parcial</option><option>Outro</option></select></label>
-        <label>Qual é seu principal desafio?<textarea name="desafio" rows="4" required placeholder="Ex.: compilar para mais de uma arquitetura, manter dependências, instalar no alvo..."></textarea></label>
-        <p class="form-note">Nesta fase, o formulário está em modo de demonstração e não armazena respostas. A integração segura será configurada antes da divulgação pública.</p>
-        <button class="button" type="submit">Quero participar da turma fundadora <span aria-hidden="true">→</span></button>
-        <p class="form-error" id="form-error" role="alert" aria-live="polite"></p>
-      </form>
+      <div class="form-intro">
+        <p class="section-label">Lista de espera</p>
+        <h2>Ajude a desenhar a turma fundadora.</h2>
+        <p>
+          Preencha uma pesquisa rápida sobre seu cenário de entrega e receba
+          prioridade quando abrirmos as vagas da primeira turma.
+        </p>
+      </div>
+    
+      <div class="form-action">
+        <p class="form-note">
+          O formulário leva menos de 3 minutos. Suas respostas ajudarão a definir
+          o formato, os exemplos e o nível técnico da imersão.
+        </p>
+    
+        <a
+          class="button"
+          href="https://docs.google.com/forms/d/e/1FAIpQLSclfHLg66dIWeq-mVd-gNxnpv84HXOUw_7OFOs6uFMgn4XzGw/viewform?usp=publish-editor"
+          target="_blank"
+          rel="noopener"
+        >
+          Quero entrar na lista de espera
+          <span aria-hidden="true">→</span>
+        </a>
+      </div>
     </section>
 
     <section class="faq" id="perguntas">
