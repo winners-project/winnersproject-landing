@@ -3,132 +3,105 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Imersão prática de CI/CD para aplicações C/C++ em Embedded Linux ARM.">
-  <title>Imersão CI/CD para Embarcados | Winners Project</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <title>Imersão CI/CD para Sistemas Embarcados | Winners Project</title>
+  <meta name="description" content="Aprenda a automatizar builds, testes, releases e deploys para Raspberry Pi, Jetson, gateways, IoT e robótica.">
+  <link rel="canonical" href="https://winnersproject.com.br/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Imersão CI/CD para Sistemas Embarcados">
+  <meta property="og:description" content="Transforme a entrega de software embarcado em um fluxo previsível e automatizado.">
+  <meta property="og:url" content="https://winnersproject.com.br/">
+  <meta property="og:site_name" content="Winners Project">
+  <meta name="theme-color" content="#0b1220">
   <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
 </head>
 <body>
   <header class="site-header">
-    <a class="brand" href="#inicio" aria-label="Winners Project, início">W<span>></span>_</a>
-    <nav aria-label="Navegação principal">
-      <a href="#conteudo">Conteúdo</a>
-      <a href="#para-quem">Para quem é</a>
-      <a href="#perguntas">Perguntas</a>
-    </nav>
-    <a class="button button-small" href="https://docs.google.com/forms/d/e/1FAIpQLSclfHLg66dIWeq-mVd-gNxnpv84HXOUw_7OFOs6uFMgn4XzGw/viewform?usp=publish-editor" target="_blank" rel="noopener">Entrar na lista</a>
+    <div class="container nav-wrap">
+      <a class="brand" href="#inicio" aria-label="Winners Project - início">Winners Project</a>
+      <a class="nav-link" href="privacidade.html">Privacidade</a>
+    </div>
   </header>
 
   <main id="inicio">
-    <section class="hero">
-      <div class="hero-copy">
-        <p class="eyebrow"><span class="status-dot"></span> Turma fundadora em preparação</p>
-        <h1>Do <code>git tag</code> ao hardware, sem deploy manual.</h1>
-        <p class="lead">Uma imersão prática para desenvolver uma esteira de CI/CD que compila, empacota e entrega aplicações C/C++ para Embedded Linux em ARMv7 e ARM64.</p>
-        <div class="hero-actions">
-          <a class="button" href="https://docs.google.com/forms/d/e/1FAIpQLSclfHLg66dIWeq-mVd-gNxnpv84HXOUw_7OFOs6uFMgn4XzGw/viewform?usp=publish-editor" target="_blank" rel="noopener">Quero entrar na lista de espera <span aria-hidden="true">→</span></a>
-          <a class="text-link" href="#conteudo">Ver o que será construído</a>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">Imersão prática para engenharia embarcada</p>
+          <h1 id="hero-title">Automatize a entrega de software para seus dispositivos embarcados</h1>
+          <p class="hero-text">Transforme builds, testes, geração de imagens e deploy em um processo previsível, repetível e seguro.</p>
+          <a class="button button-primary" data-track="hero-cta" href="https://docs.google.com/forms/d/e/1FAIpQLSclfHLg66dIWeq-mVd-gNxnpv84HXOUw_7OFOs6uFMgn4XzGw/viewform?usp=dialog" target="_blank" rel="noopener">Quero entrar na lista de espera</a>
+          <p class="microcopy">Turma piloto ao vivo. O preenchimento não representa uma compra.</p>
         </div>
-        <p class="microcopy">Sem promessa de milagre. Um template técnico, adaptável ao seu projeto.</p>
-      </div>
-      <div class="terminal-card" aria-label="Exemplo visual do fluxo de release">
-        <div class="terminal-bar"><span></span><span></span><span></span><p>release.yml</p></div>
-        <pre><span class="dim">$</span> git tag v1.0.0
-<span class="dim">$</span> git push origin v1.0.0
-
-<span class="accent">✓</span> build armv7
-<span class="accent">✓</span> build arm64
-<span class="accent">✓</span> package release
-<span class="accent">✓</span> publish artifacts
-
-<span class="prompt">release/</span>
-├── app-armv7.tar.gz
-├── app-arm64.tar.gz
-└── install.sh</pre>
+        <aside class="hero-card" aria-label="O que será trabalhado">
+          <span class="card-label">Você vai trabalhar com</span>
+          <ul>
+            <li>Builds e releases reproduzíveis</li>
+            <li>Testes antes do hardware</li>
+            <li>Imagens e deploy rastreáveis</li>
+            <li>Rollback e evolução segura</li>
+          </ul>
+        </aside>
       </div>
     </section>
 
-    <section class="pain-section">
-      <p class="section-label">O problema</p>
-      <h2>Uma release não deveria depender de memória, comandos soltos e cópia manual de arquivos.</h2>
-      <div class="pain-grid">
-        <article><span>01</span><p>Você compila em uma máquina e descobre tarde que o binário não funciona no dispositivo.</p></article>
-        <article><span>02</span><p>Cada hardware exige uma sequência diferente de binários, dependências e permissões.</p></article>
-        <article><span>03</span><p>Uma tag de versão não resulta automaticamente em um artefato reproduzível e instalável.</p></article>
+    <section class="section" aria-labelledby="problem-title">
+      <div class="container narrow">
+        <p class="eyebrow">Menos improviso, mais confiança</p>
+        <h2 id="problem-title">Deploy manual não precisa ser o gargalo do seu produto</h2>
+        <p>Scripts espalhados, builds que dependem da máquina de alguém, imagens sem rastreabilidade e testes feitos somente depois da instalação tornam cada release mais arriscado.</p>
+        <p>A imersão mostra como evoluir gradualmente desse cenário para um fluxo de entrega adequado a firmware, Linux embarcado, IoT e robótica.</p>
       </div>
     </section>
 
-    <section class="outcome" id="conteudo">
-      <div>
-        <p class="section-label">O resultado</p>
-        <h2>Uma base de entrega para seu software embarcado.</h2>
-      </div>
-      <ul class="check-list">
-        <li><span>✓</span> Pipeline acionada por tag de versão, como <code>v1.2.0</code></li>
-        <li><span>✓</span> Builds reproduzíveis em Docker para ARMv7 e ARM64</li>
-        <li><span>✓</span> Artefatos versionados com binários, bibliotecas e scripts</li>
-        <li><span>✓</span> GitHub Actions para build, testes, empacotamento e release</li>
-        <li><span>✓</span> Instalador idempotente e adaptável ao dispositivo-alvo</li>
-        <li><span>✓</span> Checklist para levar o template ao seu projeto</li>
-      </ul>
-    </section>
-
-    <section class="agenda">
-      <p class="section-label">A imersão</p>
-      <h2>Quatro encontros ao vivo. Um fluxo completo.</h2>
-      <div class="timeline">
-        <article><p class="module">Módulo 01</p><h3>Arquitetura de release</h3><p>Tags, versões, artefatos, rastreabilidade e limites de uma esteira de CI/CD para user-space em Embedded Linux.</p></article>
-        <article><p class="module">Módulo 02</p><h3>Build reproduzível</h3><p>Docker, CMake, dependências e cross-compilation para reduzir diferenças entre máquinas e alvos.</p></article>
-        <article><p class="module">Módulo 03</p><h3>Pipeline no GitHub Actions</h3><p>Jobs por arquitetura, gatilho por tag, cache, artefatos e publicação de uma release.</p></article>
-        <article><p class="module">Módulo 04</p><h3>Pacote e instalação</h3><p>Layout de release, detecção de plataforma, instalação, permissões e smoke test no hardware.</p></article>
+    <section class="section section-alt" aria-labelledby="benefits-title">
+      <div class="container">
+        <p class="eyebrow">Conteúdo orientado a casos reais</p>
+        <h2 id="benefits-title">O que você vai aprender</h2>
+        <div class="cards">
+          <article class="card"><h3>Builds consistentes</h3><p>Estruture dependências, ambientes e artefatos para gerar versões reproduzíveis.</p></article>
+          <article class="card"><h3>Testes no fluxo</h3><p>Defina verificações antes da instalação e encontre problemas mais cedo.</p></article>
+          <article class="card"><h3>Releases rastreáveis</h3><p>Conecte versões, imagens, changelogs e evidências de cada entrega.</p></article>
+          <article class="card"><h3>Deploy com segurança</h3><p>Planeje atualização, rollback e diagnóstico para reduzir o risco operacional.</p></article>
+        </div>
       </div>
     </section>
 
-    <section class="audience" id="para-quem">
-      <div class="audience-card yes"><p class="card-label">Esta imersão é para você se</p><ul><li>Desenvolve aplicações C/C++ para Linux embarcado</li><li>Entrega software em Raspberry Pi, Jetson, gateways, SBCs ou robôs ARM</li><li>Já usa Git, GitHub e terminal no dia a dia</li><li>Quer sair de SCP, pendrive e procedimentos manuais de release</li></ul></div>
-      <div class="audience-card no"><p class="card-label">Não é o foco desta turma</p><ul><li>Firmware bare-metal ou FreeRTOS sem Linux</li><li>Yocto, Buildroot ou construção de imagem de sistema operacional</li><li>OTA de frota, particionamento A/B ou certificação regulatória</li><li>Suporte garantido a todo BSP, distro ou hardware existente</li></ul></div>
-    </section>
-
-    <section class="form-section" id="inscricao">
-      <div class="form-intro">
-        <p class="section-label">Lista de espera</p>
-        <h2>Ajude a desenhar a turma fundadora.</h2>
-        <p>
-          Preencha uma pesquisa rápida sobre seu cenário de entrega e receba
-          prioridade quando abrirmos as vagas da primeira turma.
-        </p>
-      </div>
-    
-      <div class="form-action">
-        <p class="form-note">
-          O formulário leva menos de 3 minutos. Suas respostas ajudarão a definir
-          o formato, os exemplos e o nível técnico da imersão.
-        </p>
-    
-        <a
-          class="button"
-          href="https://docs.google.com/forms/d/e/1FAIpQLSclfHLg66dIWeq-mVd-gNxnpv84HXOUw_7OFOs6uFMgn4XzGw/viewform?usp=publish-editor"
-          target="_blank"
-          rel="noopener"
-        >
-          Quero entrar na lista de espera
-          <span aria-hidden="true">→</span>
-        </a>
+    <section class="section" aria-labelledby="audience-title">
+      <div class="container narrow">
+        <p class="eyebrow">Para quem é</p>
+        <h2 id="audience-title">Feita para quem entrega software ao mundo físico</h2>
+        <ul class="check-list">
+          <li>Desenvolvedores de firmware e Linux embarcado.</li>
+          <li>Profissionais de IoT industrial e gateways.</li>
+          <li>Engenheiros de robótica e automação.</li>
+          <li>Equipes que usam Raspberry Pi, Jetson, ESP32 ou STM32.</li>
+        </ul>
       </div>
     </section>
 
-    <section class="faq" id="perguntas">
-      <p class="section-label">Perguntas frequentes</p>
-      <details><summary>Preciso ter Raspberry Pi ou Jetson?</summary><p>Não para acompanhar a arquitetura e o pipeline. Para executar o fluxo completo no seu contexto, um dispositivo Linux ARM próprio é recomendado. O exemplo principal será orientado a Raspberry Pi ARM64; outros alvos exigem adaptação.</p></details>
-      <details><summary>Isso é um curso de Docker ou GitHub Actions?</summary><p>Não isoladamente. Docker e GitHub Actions são ferramentas dentro de um objetivo maior: uma entrega reproduzível de aplicação C/C++ para hardware Linux ARM.</p></details>
-      <details><summary>O evento cobre OTA e atualização de frotas?</summary><p>Não nesta primeira turma. O foco é build, empacotamento, release e instalação local/adaptável. OTA, rollback atômico e fleet management são temas avançados e separados.</p></details>
-      <details><summary>Haverá gravação?</summary><p>O formato definitivo da turma fundadora será informado às pessoas da lista de espera, junto com datas, vagas e condições.</p></details>
+    <section class="section section-alt" aria-labelledby="faq-title">
+      <div class="container narrow">
+        <p class="eyebrow">Perguntas frequentes</p>
+        <h2 id="faq-title">Antes de entrar na lista</h2>
+        <details><summary>Preciso já usar CI/CD?</summary><p>Não. A imersão parte de processos manuais e mostra uma evolução gradual para pipelines mais automatizados.</p></details>
+        <details><summary>Quais plataformas serão abordadas?</summary><p>Os exemplos serão direcionados a Raspberry Pi, Jetson, gateways, IoT e robótica, com princípios adaptáveis a outros dispositivos.</p></details>
+        <details><summary>O formulário garante uma vaga?</summary><p>Não. Ele registra seu interesse. Datas, condições e disponibilidade serão informadas posteriormente.</p></details>
+        <details><summary>Quando será a turma?</summary><p>A turma piloto será definida com base no interesse e na disponibilidade dos participantes da lista de espera.</p></details>
+      </div>
+    </section>
+
+    <section class="final-cta" aria-labelledby="cta-title">
+      <div class="container narrow">
+        <h2 id="cta-title">Quer tornar seus deploys embarcados mais previsíveis?</h2>
+        <p>Conte como você trabalha hoje e ajude a moldar a turma piloto.</p>
+        <a class="button button-primary" data-track="final-cta" href="https://docs.google.com/forms/d/e/1FAIpQLSclfHLg66dIWeq-mVd-gNxnpv84HXOUw_7OFOs6uFMgn4XzGw/viewform?usp=dialog" target="_blank" rel="noopener">Quero participar da turma piloto</a>
+      </div>
     </section>
   </main>
 
-  <footer><p>© <span id="year"></span> Winners Project</p><a href="privacidade.html">Privacidade</a><a href="mailto:contato.winnersproject@gmail.com">Contato</a></footer>
-  <script src="script.js"></script>
+  <footer class="site-footer">
+    <div class="container footer-wrap"><span>© Winners Project</span><a href="privacidade.html">Política de privacidade</a></div>
+  </footer>
 </body>
 </html>

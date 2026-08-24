@@ -1,1 +1,14 @@
-const form=document.querySelector('#waitlist-form');const error=document.querySelector('#form-error');const year=document.querySelector('#year');if(year)year.textContent=new Date().getFullYear();if(form){form.addEventListener('submit',event=>{event.preventDefault();error.textContent='';if(!form.checkValidity()){error.textContent='Preencha todos os campos obrigatórios com informações válidas.';form.reportValidity();return;}window.location.href='obrigado.html';});}
+(() => {
+  const trackedLinks = document.querySelectorAll('[data-track]');
+  trackedLinks.forEach((link) => {
+    link.addEventListener('click', () => {
+      const eventName = link.dataset.track;
+      if (typeof window.gtag === 'function') {
+        window.gtag('event', 'form_cta_click', { placement: eventName });
+      }
+      if (typeof window.fbq === 'function') {
+        window.fbq('trackCustom', 'FormCtaClick', { placement: eventName });
+      }
+    });
+  });
+})();
