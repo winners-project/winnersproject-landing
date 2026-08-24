@@ -3,105 +3,434 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Imersão CI/CD para Sistemas Embarcados | Winners Project</title>
-  <meta name="description" content="Aprenda a automatizar builds, testes, releases e deploys para Raspberry Pi, Jetson, gateways, IoT e robótica.">
+
+  <title>CI/CD para Sistemas Embarcados | Winners Project</title>
+
+  <meta
+    name="description"
+    content="Aprenda a estruturar builds, testes, releases e deploys confiáveis para sistemas embarcados com Waldemar Junior."
+  >
+
   <link rel="canonical" href="https://winnersproject.com.br/">
+
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Imersão CI/CD para Sistemas Embarcados">
-  <meta property="og:description" content="Transforme a entrega de software embarcado em um fluxo previsível e automatizado.">
+  <meta property="og:title" content="Do commit ao hardware com confiança">
+  <meta
+    property="og:description"
+    content="Imersão prática de CI/CD para firmware, Linux embarcado, IoT e robótica."
+  >
   <meta property="og:url" content="https://winnersproject.com.br/">
   <meta property="og:site_name" content="Winners Project">
-  <meta name="theme-color" content="#0b1220">
-  <link rel="stylesheet" href="style.css">
+
+  <link rel="stylesheet" href="redesign.css">
   <script defer src="script.js"></script>
 </head>
+
 <body>
-  <header class="site-header">
-    <div class="container nav-wrap">
-      <a class="brand" href="#inicio" aria-label="Winners Project - início">Winners Project</a>
-      <a class="nav-link" href="privacidade.html">Privacidade</a>
+  <header class="topbar">
+    <div class="wrap nav">
+      <a class="logo" href="#top" aria-label="Winners Project - início">
+        WINNERS
+        <span>PROJECT</span>
+      </a>
+
+      <a href="privacidade.html">Privacidade</a>
     </div>
   </header>
 
-  <main id="inicio">
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="container hero-grid">
+  <main id="top">
+    <section class="hero">
+      <div class="wrap hero-layout">
+        <div class="hero-copy">
+          <p class="kicker">TURMA PILOTO • CI/CD PARA EMBARCADOS</p>
+
+          <h1>Do commit ao hardware com confiança.</h1>
+
+          <p class="lead">
+            Estruture um fluxo reproduzível para gerar, testar, versionar e
+            entregar software em Raspberry Pi, Jetson, gateways, IoT e robôs.
+          </p>
+
+          <a
+            class="btn btn-main"
+            data-track="hero"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSclfHLg66dIWeq-mVd-gNxnpv84HXOUw_7OFOs6uFMgn4XzGw/viewform?usp=dialog"
+            target="_blank"
+            rel="noopener"
+          >
+            Quero entrar na lista de espera
+            <span>↗</span>
+          </a>
+
+          <p class="note">
+            Leva cerca de 2 minutos. Sem compromisso de compra.
+          </p>
+        </div>
+
+        <div
+          class="pipeline"
+          aria-label="Fluxo de entrega: código, build, testes e hardware"
+        >
+          <div class="pipeline-top">
+            <span>DELIVERY PIPELINE</span>
+            <span class="live">
+              <i></i>
+              FIELD-READY
+            </span>
+          </div>
+
+          <div class="pipeline-flow">
+            <div class="node">
+              <b>01</b>
+              <strong>Commit</strong>
+              <small>código</small>
+            </div>
+
+            <em aria-hidden="true">→</em>
+
+            <div class="node">
+              <b>02</b>
+              <strong>Build</strong>
+              <small>artefato</small>
+            </div>
+
+            <em aria-hidden="true">→</em>
+
+            <div class="node">
+              <b>03</b>
+              <strong>Test</strong>
+              <small>validação</small>
+            </div>
+
+            <em aria-hidden="true">→</em>
+
+            <div class="node">
+              <b>04</b>
+              <strong>Deploy</strong>
+              <small>hardware</small>
+            </div>
+          </div>
+
+          <div class="pipeline-bottom">
+            REPRODUCÍVEL
+            <span>•</span>
+            RASTREÁVEL
+            <span>•</span>
+            SEGURO
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="trust" aria-label="Experiência do instrutor">
+      <div class="wrap trust-grid">
         <div>
-          <p class="eyebrow">Imersão prática para engenharia embarcada</p>
-          <h1 id="hero-title">Automatize a entrega de software para seus dispositivos embarcados</h1>
-          <p class="hero-text">Transforme builds, testes, geração de imagens e deploy em um processo previsível, repetível e seguro.</p>
-          <a class="button button-primary" data-track="hero-cta" href="https://docs.google.com/forms/d/e/1FAIpQLSclfHLg66dIWeq-mVd-gNxnpv84HXOUw_7OFOs6uFMgn4XzGw/viewform?usp=dialog" target="_blank" rel="noopener">Quero entrar na lista de espera</a>
-          <p class="microcopy">Turma piloto ao vivo. O preenchimento não representa uma compra.</p>
+          <strong>
+            Experiência em software que opera fora do laboratório
+          </strong>
+
+          <span>
+            Robótica autônoma • Linux embarcado • Firmware • Edge AI
+          </span>
         </div>
-        <aside class="hero-card" aria-label="O que será trabalhado">
-          <span class="card-label">Você vai trabalhar com</span>
-          <ul>
-            <li>Builds e releases reproduzíveis</li>
-            <li>Testes antes do hardware</li>
-            <li>Imagens e deploy rastreáveis</li>
-            <li>Rollback e evolução segura</li>
-          </ul>
-        </aside>
-      </div>
-    </section>
 
-    <section class="section" aria-labelledby="problem-title">
-      <div class="container narrow">
-        <p class="eyebrow">Menos improviso, mais confiança</p>
-        <h2 id="problem-title">Deploy manual não precisa ser o gargalo do seu produto</h2>
-        <p>Scripts espalhados, builds que dependem da máquina de alguém, imagens sem rastreabilidade e testes feitos somente depois da instalação tornam cada release mais arriscado.</p>
-        <p>A imersão mostra como evoluir gradualmente desse cenário para um fluxo de entrega adequado a firmware, Linux embarcado, IoT e robótica.</p>
-      </div>
-    </section>
+        <div class="trust-stats">
+          <div>
+            <b>8+</b>
+            <span>anos em embarcados</span>
+          </div>
 
-    <section class="section section-alt" aria-labelledby="benefits-title">
-      <div class="container">
-        <p class="eyebrow">Conteúdo orientado a casos reais</p>
-        <h2 id="benefits-title">O que você vai aprender</h2>
-        <div class="cards">
-          <article class="card"><h3>Builds consistentes</h3><p>Estruture dependências, ambientes e artefatos para gerar versões reproduzíveis.</p></article>
-          <article class="card"><h3>Testes no fluxo</h3><p>Defina verificações antes da instalação e encontre problemas mais cedo.</p></article>
-          <article class="card"><h3>Releases rastreáveis</h3><p>Conecte versões, imagens, changelogs e evidências de cada entrega.</p></article>
-          <article class="card"><h3>Deploy com segurança</h3><p>Planeje atualização, rollback e diagnóstico para reduzir o risco operacional.</p></article>
+          <div>
+            <b>200+</b>
+            <span>robôs com FOTA</span>
+          </div>
+
+          <div>
+            <b>15+</b>
+            <span>meses em campo</span>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="section" aria-labelledby="audience-title">
-      <div class="container narrow">
-        <p class="eyebrow">Para quem é</p>
-        <h2 id="audience-title">Feita para quem entrega software ao mundo físico</h2>
-        <ul class="check-list">
-          <li>Desenvolvedores de firmware e Linux embarcado.</li>
-          <li>Profissionais de IoT industrial e gateways.</li>
-          <li>Engenheiros de robótica e automação.</li>
-          <li>Equipes que usam Raspberry Pi, Jetson, ESP32 ou STM32.</li>
-        </ul>
+    <section class="section problem">
+      <div class="wrap narrow">
+        <p class="kicker">O PROBLEMA REAL</p>
+
+        <h2>
+          Seu software funciona na sua máquina. Mas funciona de forma
+          repetível?
+        </h2>
+
+        <p>
+          Em sistemas embarcados, cada release envolve dependências,
+          cross-compilation, imagens, conectividade limitada e hardware real.
+          Quando o processo depende de scripts manuais e da memória da equipe,
+          o próximo deploy vira risco.
+        </p>
+
+        <div class="pain-grid">
+          <article>
+            <span>01</span>
+            <h3>Builds inconsistentes</h3>
+            <p>
+              O mesmo código gera resultados diferentes dependendo do ambiente.
+            </p>
+          </article>
+
+          <article>
+            <span>02</span>
+            <h3>Deploy sem rastreabilidade</h3>
+            <p>
+              Ninguém sabe exatamente qual artefato está instalado no
+              dispositivo.
+            </p>
+          </article>
+
+          <article>
+            <span>03</span>
+            <h3>Rollback improvisado</h3>
+            <p>
+              Quando algo falha em campo, recuperar a versão anterior demora.
+            </p>
+          </article>
+        </div>
       </div>
     </section>
 
-    <section class="section section-alt" aria-labelledby="faq-title">
-      <div class="container narrow">
-        <p class="eyebrow">Perguntas frequentes</p>
-        <h2 id="faq-title">Antes de entrar na lista</h2>
-        <details><summary>Preciso já usar CI/CD?</summary><p>Não. A imersão parte de processos manuais e mostra uma evolução gradual para pipelines mais automatizados.</p></details>
-        <details><summary>Quais plataformas serão abordadas?</summary><p>Os exemplos serão direcionados a Raspberry Pi, Jetson, gateways, IoT e robótica, com princípios adaptáveis a outros dispositivos.</p></details>
-        <details><summary>O formulário garante uma vaga?</summary><p>Não. Ele registra seu interesse. Datas, condições e disponibilidade serão informadas posteriormente.</p></details>
-        <details><summary>Quando será a turma?</summary><p>A turma piloto será definida com base no interesse e na disponibilidade dos participantes da lista de espera.</p></details>
+    <section class="section transformation">
+      <div class="wrap">
+        <p class="kicker">A TRANSFORMAÇÃO</p>
+
+        <h2>Troque improviso por um sistema de entrega.</h2>
+
+        <div class="before-after">
+          <div>
+            <span class="tag old">HOJE</span>
+
+            <h3>Processo manual</h3>
+
+            <ul>
+              <li>SCP, SSH ou flash manual</li>
+              <li>Build dependente da máquina local</li>
+              <li>Testes depois da instalação</li>
+              <li>Imagens difíceis de rastrear</li>
+            </ul>
+          </div>
+
+          <div class="arrow" aria-hidden="true">→</div>
+
+          <div class="after">
+            <span class="tag new">OBJETIVO</span>
+
+            <h3>Fluxo estruturado</h3>
+
+            <ul>
+              <li>Builds reproduzíveis</li>
+              <li>Artefatos versionados</li>
+              <li>Validações antes do deploy</li>
+              <li>Rollback planejado</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="final-cta" aria-labelledby="cta-title">
-      <div class="container narrow">
-        <h2 id="cta-title">Quer tornar seus deploys embarcados mais previsíveis?</h2>
-        <p>Conte como você trabalha hoje e ajude a moldar a turma piloto.</p>
-        <a class="button button-primary" data-track="final-cta" href="https://docs.google.com/forms/d/e/1FAIpQLSclfHLg66dIWeq-mVd-gNxnpv84HXOUw_7OFOs6uFMgn4XzGw/viewform?usp=dialog" target="_blank" rel="noopener">Quero participar da turma piloto</a>
+    <section class="section deliverables">
+      <div class="wrap">
+        <p class="kicker">CONTEÚDO PRÁTICO</p>
+
+        <h2>O que você vai construir</h2>
+
+        <p class="section-intro">
+          Uma arquitetura de referência para adaptar ao seu projeto — sem
+          tratar embarcados como se fossem apenas aplicações web.
+        </p>
+
+        <div class="deliver-grid">
+          <article>
+            <b>01</b>
+            <h3>Build reproduzível</h3>
+            <p>
+              Ambiente, dependências e artefatos organizados.
+            </p>
+          </article>
+
+          <article>
+            <b>02</b>
+            <h3>Testes no fluxo</h3>
+            <p>
+              Validações antes de instalar no dispositivo.
+            </p>
+          </article>
+
+          <article>
+            <b>03</b>
+            <h3>Release rastreável</h3>
+            <p>
+              Versões, imagens e changelogs conectados.
+            </p>
+          </article>
+
+          <article>
+            <b>04</b>
+            <h3>Deploy seguro</h3>
+            <p>
+              Atualização, rollback e diagnóstico.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section instructor">
+      <div class="wrap instructor-grid">
+        <div
+          class="portrait"
+          role="img"
+          aria-label="Waldemar Junior, instrutor da imersão"
+        >
+          <span>WJ</span>
+          <small>instrutor</small>
+        </div>
+
+        <div>
+          <p class="kicker">QUEM VAI GUIAR VOCÊ</p>
+
+          <h2>Experiência de campo, não apenas teoria.</h2>
+
+          <p>
+            Eu sou
+            <strong>Waldemar Pereira Gonçalves Junior</strong>,
+            engenheiro de computação e pós-graduado em Inteligência Artificial
+            e Aprendizado de Máquina.
+          </p>
+
+          <p>
+            Há mais de 8 anos desenvolvo sistemas embarcados e robótica para
+            operar em condições reais. Construí infraestrutura FOTA para mais
+            de 200 robôs autônomos, sistemas de controle remoto, streaming
+            WebRTC e soluções baseadas em CAN Bus para máquinas agrícolas.
+          </p>
+
+          <p>
+            Minha experiência começou no hardware, com diagnóstico e engenharia
+            reversa de ECUs, e evoluiu para software crítico em Linux
+            embarcado, C/C++, gRPC, WebRTC, Jetson e edge AI.
+          </p>
+
+          <a
+            class="text-link"
+            href="https://www.linkedin.com/in/eng-comp-waldemar-junior/"
+            target="_blank"
+            rel="noopener"
+          >
+            Conheça minha trajetória no LinkedIn ↗
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section audience">
+      <div class="wrap narrow">
+        <p class="kicker">PARA QUEM É</p>
+
+        <h2>Para quem entrega software ao mundo físico.</h2>
+
+        <div class="audience-list">
+          <p>✓ Desenvolvedores de firmware e Linux embarcado.</p>
+          <p>✓ Engenheiros de IoT, gateways e robótica.</p>
+          <p>✓ Equipes com Raspberry Pi, Jetson, ESP32 ou STM32.</p>
+          <p>✓ Profissionais cansados de depender de deploys manuais.</p>
+        </div>
+
+        <div class="not-for">
+          <strong>Não é DevOps genérico.</strong>
+
+          <span>
+            É CI/CD adaptado às restrições de hardware, conectividade e
+            operação em campo.
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section faq">
+      <div class="wrap narrow">
+        <p class="kicker">PERGUNTAS FREQUENTES</p>
+
+        <h2>Antes de entrar na lista.</h2>
+
+        <details>
+          <summary>Preciso já dominar CI/CD?</summary>
+          <p>
+            Não. O conteúdo parte de processos manuais e mostra uma evolução
+            prática até um fluxo mais estruturado.
+          </p>
+        </details>
+
+        <details>
+          <summary>Preciso ter infraestrutura em nuvem?</summary>
+          <p>
+            Não necessariamente. As decisões serão apresentadas considerando
+            diferentes níveis de infraestrutura e as restrições do hardware.
+          </p>
+        </details>
+
+        <details>
+          <summary>O formulário garante uma vaga?</summary>
+          <p>
+            Não. Ele registra seu interesse e ajuda a definir formato,
+            conteúdo e condições da turma piloto.
+          </p>
+        </details>
+
+        <details>
+          <summary>Quando será a turma?</summary>
+          <p>
+            A data será definida após entendermos o interesse e a
+            disponibilidade dos participantes.
+          </p>
+        </details>
+      </div>
+    </section>
+
+    <section class="final">
+      <div class="wrap final-inner">
+        <p class="kicker">PRÓXIMO PASSO</p>
+
+        <h2>
+          Se você quer parar de apagar incêndios a cada release, comece aqui.
+        </h2>
+
+        <p>
+          Conte como você entrega software hoje e ajude a moldar a primeira
+          turma.
+        </p>
+
+        <a
+          class="btn btn-main"
+          data-track="final"
+          href="https://docs.google.com/forms/d/e/1FAIpQLSclfHLg66dIWeq-mVd-gNxnpv84HXOUw_7OFOs6uFMgn4XzGw/viewform?usp=dialog"
+          target="_blank"
+          rel="noopener"
+        >
+          Quero entrar na lista de espera
+          <span>↗</span>
+        </a>
+
+        <p class="note">
+          Sem compromisso de compra • Respostas usadas para planejar a turma
+        </p>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container footer-wrap"><span>© Winners Project</span><a href="privacidade.html">Política de privacidade</a></div>
+  <footer>
+    <div class="wrap footer-row">
+      <span>© Winners Project</span>
+      <a href="privacidade.html">Política de privacidade</a>
+    </div>
   </footer>
 </body>
 </html>
